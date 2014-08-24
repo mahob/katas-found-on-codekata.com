@@ -1,3 +1,3 @@
-# Implementations of katas found on [http://CodeKata.com](CodeKata.com)
+# Katas
 
-Feel free to read, clone, copy my kata implementations.
+I found some code katas on [http://codekata.com](CodeKata.com). Feel free to read, clone, copy my implementations.
