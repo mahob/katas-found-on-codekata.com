@@ -1,7 +1,19 @@
 (ns anagrams.core
   (:gen-class))
 
+(defn build-anagram
+  "Builds the anagram of the given word."
+  [word]
+  (apply str (sort word)))
+
+(defn add-anagram
+  "Adds an anagram to the table of anagrams."
+  [anagram]
+  (1))
+
 (defn -main
-  "I don't do a whole lot ... yet."
+  "Builds and counts anagrams of the words in the wordlist.txt file."
   [& args]
-  (println "Hello, World!"))
+  (with-open [r (clojure.java.io/reader "../wordlist.txt")]
+    (doseq [line (line-seq r)]
+      (println line (build-anagram line)))))
