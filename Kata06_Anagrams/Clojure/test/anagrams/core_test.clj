@@ -4,16 +4,12 @@
 
 (deftest build-anagram-test
   (testing "anagrams.core build-anagram"
-     (is (= (build-anagram "hello") "ehllo"))))
+           (is (= (build-anagram "hello") "ehllo"))))
 
-;(deftest add-anagram-test
-;  (testing "anagrams.core add-anagram"
- ;    (is (= (add-anagram "ehllo") 1))))
+(deftest file-lines-test
+  (testing "anagrams.core file-lines"
+           (is (= (file-lines "test/resources/small-wordlist.txt") ["lady" "gaga"] ))))
 
-;(deftest anagram-counter-test
-;  (testing "basic anagram conting"
-;    (is (= (anagram-counter "ab\nba") {"ab" ["ab" "ba"]}))))
-
-(deftest char-counter-test
-  (testing "counting chars"
-           (is (= (char-counter "bab") {\a 1, \b 2}))))
+(deftest anagrams-from-file-test
+  (testing "basic anagram counting"
+    (is (= (anagrams-from-file "test/resources/medium-wordlist.txt") {"abz" ["baz"], "abr" ["bar" "rab"], "foo" ["foo" "ofo" "oof"]}))))
